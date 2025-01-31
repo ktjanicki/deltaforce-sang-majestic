@@ -42,10 +42,7 @@ function updateFavicons() {
   });
 }
 
-// Aktualizacja przy załadowaniu strony
 updateFavicons();
-
-// Obsługa zmian systemowego motywu
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateFavicons);
 
 function scrollToAboutSection(duration = 2000, section) {

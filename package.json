@@ -1,4 +1,9 @@
 {
+  "name": "deltaforce-sang-majestic",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Krzysztof Janicki",
+  "license": "MIT",
   "devDependencies": {
     "parcel": "^2.13.3"
   }

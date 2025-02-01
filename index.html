@@ -1,390 +1,550 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 viewport-fit=cover"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
-    <link rel="preload" href="img/photo01.jpeg" as="image">
-    <link rel="preload" href="img/photo02.jpeg" as="image">
-    <link rel="preload" href="img/photo03.jpeg" as="image">
-    
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link rel="preload" href="img/photo01.jpeg" as="image" />
+    <link rel="preload" href="img/photo02.jpeg" as="image" />
+    <link rel="preload" href="img/photo03.jpeg" as="image" />
     <title>Delta Force - SANG</title>
-</head>
-<body class="photo00 bg1">
+  </head>
+  <body class="photo00 bg1">
     <div class="wrapper">
-        <div class="logo">
-            <div class="logoDelta"></div>
-            <div class="arrow">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <button class="hamburgerIcon" aria-label="Main Menu">
+        <svg width="45" height="45" viewBox="0 0 100 100">
+          <path
+            class="line line1"
+            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+          />
+          <path class="line line2" d="M 20,50 H 80" />
+          <path
+            class="line line3"
+            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+          />
+        </svg>
+      </button>
+
+      <div class="logo">
+        <div class="logoDelta"></div>
+        <div class="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <nav class="boxShadow">
-            <div class="flexRowWrapper">
-                <div class="navLogo">
-                    <a href="/"><img src="img/logo-delta2.png" alt=""></a>
-                </div>
-                <ul class="menu">
-                    <li class="link0">Start</li>
-                    <div class="verticalSeparatorBlack"></div>
-                    <li class="link1">Czym jest Delta</li>
-                    <div class="verticalSeparatorBlack"></div>
-                    <li class="link2">Jak działamy</li>
-                    <div class="verticalSeparatorBlack"></div>
-                    <li class="link3">Zarząd</li>
+      </div>
+      <nav class="boxShadow off">
+        <div class="navWrapper">
+          <div class="navLogo">
+            <a class="desctopLogo" href="/"
+              ><img src="img/logo-delta2.png" alt=""
+            /></a>
+            <a class="mobileLogo" href="/"
+              ><img src="img/logo-delta3.png" alt=""
+            /></a>
+          </div>
+          <ul class="menu">
+            <li class="link0">Start</li>
+            <div class="verticalSeparatorBlack"></div>
+            <li class="link1">Czym jest Delta</li>
+            <div class="verticalSeparatorBlack"></div>
+            <li class="link2">Jak działamy</li>
+            <div class="verticalSeparatorBlack"></div>
+            <li class="link3">Zarząd</li>
+          </ul>
+        </div>
+      </nav>
+      <header></header>
+      <section class="about">
+        <div class="flexRowWrapper">
+          <div class="imageWrapper">
+            <div class="sectionImage deltaGoldLogo"></div>
+          </div>
+          <div class="flexColumnWrapper">
+            <p class="sectionTextHeader">Czym jest Delta?</p>
+            <hr class="separatorLight" />
+            <p class="sectionTextContent">
+              Delta Force to elitarna jednostka specjalna strategicznego
+              znaczenia, stanowiąca kluczowy element San Andreas National Guard
+              (SANG). Jej działania koncentrują się na reagowaniu na
+              najpoważniejsze zagrożenia bezpieczeństwa w stanie San Andreas
+              oraz poza jego granicami. Delta została powołana do obrony
+              strategicznych lokalizacji, takich jak Fort Zacundo czy wyspa Cayo
+              Perico, a także do neutralizowania zagrożeń o wysokim stopniu
+              ryzyka – od ataków terrorystycznych i napadów po działania zbrojne
+              wymierzone w stabilność regionu.
+            </p>
+            <p class="sectionTextContent">
+              Operacje Delty charakteryzują się precyzją, szybkością i
+              skutecznością. Jednostka ta specjalizuje się w dynamicznych
+              interwencjach, prowadzeniu patroli w wyznaczonych strefach,
+              wsparciu kryzysowym oraz operacjach strategicznych o kluczowym
+              znaczeniu. Dzięki zaawansowanemu wyszkoleniu, nowoczesnemu
+              wyposażeniu i niezrównanej dyscyplinie, Delta Force pozostaje
+              gotowa do działania w każdych warunkach, zapewniając
+              bezpieczeństwo mieszkańcom stanu San Andreas. To symbol odwagi,
+              profesjonalizmu i nieustannej gotowości do ochrony kraju przed
+              wszelkimi zagrożeniami.
+            </p>
+          </div>
+        </div>
+        <div class="flexColumnWrapper">
+          <p class="sectionTextHeader">Historia</p>
+          <hr class="separatorLight" />
+          <p class="sectionTextContent history">
+            Historia Delta Force to opowieść o ciągłej ewolucji, adaptacji i
+            doskonaleniu w obliczu dynamicznie zmieniających się zagrożeń
+            bezpieczeństwa w stanie San Andreas oraz poza jego granicami.
+            Fundamenty tej elitarnej jednostki sięgają września 2022 roku, kiedy
+            to krótko po otwarciu Fort Zacundo została utworzona pierwsza
+            specjalna formacja Quick Reaction Force (QRF). Jej twórcą był
+            William Fisher, wizjoner i strateg, który dostrzegł rosnące potrzeby
+            w zakresie szybkiego reagowania na kryzysowe sytuacje. Powstanie QRF
+            było odpowiedzią na częste ataki na Fort Zacundo i wyspę Cayo Perico
+            oraz wzrastającą aktywność grup przestępczych destabilizujących
+            bezpieczeństwo stanu San Andreas. Jednostka QRF była pierwszą linią
+            obrony, specjalizując się w błyskawicznych interwencjach i
+            działaniach ratunkowych.
+          </p>
+          <p class="sectionTextContent history">
+            Jednak wraz z upływem czasu i zmianą charakteru zagrożeń okazało
+            się, że szybka reakcja to za mało. Konieczne było stworzenie
+            bardziej wyspecjalizowanej jednostki, która mogłaby sprostać
+            rosnącemu zagrożeniu terroryzmem wewnętrznym. 22 października 2023
+            roku, w odpowiedzi na te potrzeby, powołano Inter Terrorism
+            Counteraction Unit (ITCU). Jej założycielem był Ernest VarEmreis,
+            doświadczony analityk i strateg bezpieczeństwa, którego wizja
+            stworzenia jednostki dedykowanej zwalczaniu terroryzmu wewnętrznego
+            szybko zdobyła poparcie władz federalnych i lokalnych. ITCU została
+            stworzona z myślą o przeciwdziałaniu najbardziej zaawansowanym
+            zagrożeniom terrorystycznym na terenie kraju, a jej struktury
+            zostały zaprojektowane z naciskiem na efektywność, współpracę i
+            integrację z innymi agencjami bezpieczeństwa.
+          </p>
+          <p class="sectionTextContent history">
+            Pułkownik Connor Ghost, jeden z najbardziej szanowanych liderów
+            Gwardii Narodowej stanu San Andreas, odegrał kluczową rolę w
+            mobilizacji zasobów i wsparcia dla ITCU. Dzięki swojemu
+            doświadczeniu w dziedzinie obronności krajowej oraz znajomości
+            lokalnych zagrożeń był fundamentem sukcesu jednostki. Nieoceniony
+            wkład w rozwój ITCU miał także Nathan Brown, uznawany za wybitnego
+            stratega logistyki w stanie San Andreas. Jego zaangażowanie
+            doprowadziło do umocnienia struktury ITCU oraz podpisania kluczowej
+            umowy przekazującej jednostkę pod jurysdykcję Departamentu
+            Bezpieczeństwa Krajowego (DHS). Pod nadzorem DHS ITCU stała się
+            integralną częścią narodowego systemu obrony, zyskując dostęp do
+            zaawansowanych zasobów i wiedzy, które umożliwiły jej skuteczne
+            działanie.
+          </p>
+        </div>
+        <div class="flexRowWrapper">
+          <div class="historyPhoto itcu1 boxShadow"></div>
+          <div class="historyPhoto itcu2 boxShadow"></div>
+        </div>
+        <div>
+          <p class="sectionTextContent history">
+            Przez kilka lat QRF i ITCU funkcjonowały równolegle, pełniąc różne,
+            lecz wzajemnie uzupełniające się role w systemie bezpieczeństwa
+            stanu San Andreas. Jednak dynamicznie rozwijająca się sytuacja
+            geopolityczna oraz zmieniające się charakterystyki zagrożeń wymagały
+            nowego podejścia. Punktem zwrotnym była inicjatywa generała Kai
+            Stonesa w czerwcu 2024 roku, który zaproponował kompleksową
+            modernizację struktur specjalnych SANG. Na bazie ITCU powstała
+            jednostka Delta Force, mająca w pełni zintegrować i zoptymalizować
+            działania specjalne Gwardii Narodowej.
+          </p>
+          <p class="sectionTextContent history">
+            Delta Force od samego początku była projektowana jako formacja
+            łącząca najlepsze cechy swoich poprzedniczek – szybkość i
+            elastyczność QRF oraz precyzję i specjalistyczne podejście ITCU.
+            Niedługo po jej utworzeniu jednostka QRF została wcielona w
+            struktury Delta Force, co umożliwiło pełną konsolidację doświadczeń
+            i zasobów obu formacji. Proces ten był kluczowym krokiem w kierunku
+            stworzenia jednej, kompleksowej jednostki, zdolnej sprostać każdemu
+            wyzwaniu, jakie mogłyby stanąć przed San Andreas National Guard.
+          </p>
+          <p class="sectionTextContent history">
+            Przez kolejne miesiące Delta Force przechodziła intensywną
+            integrację, wdrażając nowe procedury, opracowując zaawansowane
+            strategie działania i doskonaląc swoje zdolności operacyjne.
+            Konsolidacja zasobów i doświadczeń z QRF i ITCU pozwoliła na
+            stworzenie jednostki o niespotykanej dotąd skuteczności. Delta Force
+            zaczęła wyznaczać standardy w operacjach specjalnych, a jej
+            członkowie stali się symbolem odwagi, profesjonalizmu i
+            zaangażowania.
+          </p>
+          <p class="sectionTextContent history">
+            Obecnie Delta Force to elitarna formacja, która działa na pierwszej
+            linii obrony w stanie San Andreas. Jej historia to dowód na to, jak
+            ważna jest adaptacja, współpraca i ciągłe doskonalenie w obliczu
+            nowych wyzwań. Dzięki determinacji liderów i zaangażowaniu swoich
+            członków, Delta Force jest gotowa stawić czoła każdemu zagrożeniu,
+            zapewniając bezpieczeństwo mieszkańcom San Andreas.
+          </p>
+        </div>
+      </section>
+      <div class="backgroundPhotoSeparator photo01"></div>
+      <section class="whatWeDo">
+        <div class="flexColumnWrapper">
+          <p class="sectionTextHeader">Jak działamy?</p>
+          <hr class="separatorBlack" />
+          <p class="sectionTextContent history">
+            Delta Force to elitarna jednostka specjalna, której działania
+            opierają się na precyzji, szybkości i skuteczności. Realizujemy
+            szeroki zakres misji – od szybkiego reagowania na zagrożenia i
+            ochrony kluczowych obiektów, po operacje antyterrorystyczne i
+            działania ratunkowe. Dzięki zaawansowanemu wyposażeniu, stałym
+            szkoleniom i współpracy z innymi agencjami, jesteśmy w stanie
+            skutecznie reagować na każde zagrożenie. Elastyczność i zdolność
+            adaptacji pozwalają nam działać w każdych warunkach, zapewniając
+            bezpieczeństwo i stabilność w stanie San Andreas.
+          </p>
+        </div>
+        <div class="flexColumnWrapper">
+          <iframe
+            class="videoPlayer boxShadow"
+            src="https://www.youtube.com/embed/hBom-shyi4M"
+          ></iframe>
+        </div>
+        <div class="flexRowWrapper">
+          <div class="imageWrapper">
+            <div class="sectionImage patrol1 whatWeDoPhoto boxShadow"></div>
+          </div>
+          <div class="flexColumnWrapper">
+            <p class="sectionTextHeaderSmall">Obrona infrastruktury</p>
+            <hr class="separatorBlack" />
+            <p class="sectionTextContent">
+              Delta Force odgrywa kluczową rolę w obronie strategicznych
+              lokalizacji, takich jak Fort Zacundo i wyspa Cayo Perico. Naszym
+              priorytetem jest ochrona tych kluczowych punktów przed atakami
+              zorganizowanych grup przestępczych, które mogą zagrażać
+              bezpieczeństwu narodowemu.
+            </p>
+            <p class="sectionTextContent">
+              Nasi operatorzy są stale gotowi do działania, monitorując
+              zagrożenia i reagując na każdą próbę naruszenia bezpieczeństwa.
+              Dzięki zaawansowanemu wyposażeniu, ścisłej koordynacji i
+              precyzyjnie opracowanym procedurom jesteśmy w stanie szybko
+              neutralizować zagrożenia i zapewniać pełne bezpieczeństwo na tych
+              kluczowych obszarach. Delta Force stoi na straży Fortu Zacundo i
+              wyspy Cayo Perico, będąc nieprzerwanie gotową do obrony przed
+              każdą formą agresji.
+            </p>
+          </div>
+        </div>
+        <div class="flexRowWrapper">
+          <div class="flexColumnWrapper">
+            <p class="sectionTextHeaderSmall">Wsparcie operacyjne</p>
+            <hr class="separatorBlack" />
+            <p class="sectionTextContent">
+              Delta Force aktywnie wspiera inne frakcje państwowe w sytuacjach
+              wymagających zaawansowanego wsparcia operacyjnego. Nasze działania
+              obejmują reakcję na marki c0, neutralizację oraz obstawa napadów
+              na banki i biznesy oraz udział w pościgach za szczególnie
+              niebezpiecznymi przestępcami.
+            </p>
+            <p class="sectionTextContent">
+              Dzięki ścisłej współpracy z lokalnymi służbami, szybkości
+              działania i doskonałemu przygotowaniu, skutecznie wspieramy
+              egzekwowanie prawa na najwyższym poziomie. Delta Force zapewnia
+              kluczowe wsparcie tam, gdzie precyzja i profesjonalizm są
+              niezbędne, aby przywrócić bezpieczeństwo i porządek.
+            </p>
+          </div>
+          <div class="imageWrapper">
+            <div class="sectionImage patrol1 whatWeDoPhoto boxShadow"></div>
+          </div>
+        </div>
+        <div class="flexRowWrapper">
+          <div class="imageWrapper">
+            <div class="sectionImage patrol1 whatWeDoPhoto boxShadow"></div>
+          </div>
+          <div class="flexColumnWrapper">
+            <p class="sectionTextHeaderSmall">Szkolenia</p>
+            <hr class="separatorBlack" />
+            <p class="sectionTextContent">
+              Delta Force pełni kluczową rolę w podnoszeniu kompetencji służb
+              państwowych poprzez realizację specjalistycznych szkoleń z zakresu
+              procedur i strategii operacyjnych. Organizujemy dedykowane kursy
+              zarówno dla członków San Andreas National Guard, jak i
+              funkcjonariuszy innych frakcji państwowych, dzieląc się wiedzą i
+              doświadczeniem w obszarze działań taktycznych i zarządzania
+              kryzysowego.
+            </p>
+            <p class="sectionTextContent">
+              Jednocześnie prowadzimy intensywne, wewnętrzne szkolenia dla
+              naszych żołnierzy i rekrutów, koncentrując się na sprawności
+              fizycznej, wytrzymałości oraz umiejętnościach praktycznych. Dzięki
+              temu nasze szeregi zasilają wyłącznie doskonale przygotowani
+              specjaliści, gotowi sprostać każdemu wyzwaniu. Szkolenia Delta
+              Force to gwarancja najwyższego poziomu przygotowania i
+              profesjonalizmu.
+            </p>
+          </div>
+        </div>
+        <div class="flexRowWrapper">
+          <div class="flexColumnWrapper">
+            <p class="sectionTextHeaderSmall">Działania saperskie</p>
+            <hr class="separatorBlack" />
+            <p class="sectionTextContent">
+              Delta Force prowadzi działania związane z rozbrajaniem ładunków
+              wybuchowych oraz neutralizacją zagrożeń wynikających z użycia
+              materiałów wybuchowych. W naszych szeregach znajdują się
+              wyspecjalizowani operatorzy saperscy, którzy dzięki swojej wiedzy,
+              doświadczeniu i zaawansowanym umiejętnościom są w stanie
+              skutecznie identyfikować, zabezpieczać i neutralizować różnego
+              rodzaju ładunki, w tym improwizowane urządzenia wybuchowe (IED).
+              Dzięki precyzyjnemu przygotowaniu i pracy zespołowej Delta Force
+              stanowi kluczową linię obrony przed zagrożeniami wybuchowymi na
+              terenie Fortu Zacundo, wyspy Cayo Perico oraz w całym stanie San
+              Andreas.
+            </p>
+          </div>
+          <div class="imageWrapper">
+            <div class="sectionImage patrol1 whatWeDoPhoto boxShadow"></div>
+          </div>
+        </div>
+        <div class="flexColumnWrapper">
+          <hr class="separatorBlack" />
+          <p class="sectionTextContent history quote">
+            &rdquo;Delta nie pyta, Delta nie zwleka&bdquo;
+          </p>
+        </div>
+      </section>
+      <div class="backgroundPhotoSeparator photo02"></div>
+      <section class="leaderboard">
+        <div class="flexColumnWrapper">
+          <p class="sectionTextHeader">Zarząd Delta Force</p>
+          <hr class="separatorLight" />
+          <div class="flexRowWrapper leaderTier">
+            <div class="flexRowWrapper leaderProfile">
+              <div class="flexColumnWrapper avatarWrapper">
+                <div class="leaderAvatar"></div>
+                <div class="leaderRank colonel"></div>
+              </div>
+              <div class="leaderDescription">
+                <ul>
+                  <li><span class="white">Ezekiell Vesperra</span></li>
+                  <li><span class="italic">Colonel</span></li>
+                  <li><span class="italic">Platoon Commander</span></li>
                 </ul>
+              </div>
             </div>
-        </nav>
-        <header>
-        </header>
-        <section class="about">
-            <div class="flexRowWrapper">
-                <div class="imageWrapper">
-                    <div class="sectionImage deltaGoldLogo"></div>
-                </div>
-                <div class="flexColumnWrapper">
-                    <p class="sectionTextHeader">Czym jest Delta?</p>
-                    <hr class="separatorLight">
-                    <p class="sectionTextContent">Delta Force to elitarna jednostka specjalna strategicznego znaczenia, stanowiąca kluczowy element San
-                    Andreas National Guard (SANG). Jej działania koncentrują się na reagowaniu na najpoważniejsze zagrożenia bezpieczeństwa
-                    w stanie San Andreas oraz poza jego granicami. Delta została powołana do obrony strategicznych lokalizacji, takich jak
-                    Fort Zacundo czy wyspa Cayo Perico, a także do neutralizowania zagrożeń o wysokim stopniu ryzyka – od ataków
-                    terrorystycznych i napadów po działania zbrojne wymierzone w stabilność regionu.</p>
-                    <p class="sectionTextContent">Operacje Delty charakteryzują się precyzją, szybkością i skutecznością. Jednostka ta specjalizuje się w dynamicznych
-                    interwencjach, prowadzeniu patroli w wyznaczonych strefach, wsparciu kryzysowym oraz operacjach strategicznych o
-                    kluczowym znaczeniu. Dzięki zaawansowanemu wyszkoleniu, nowoczesnemu wyposażeniu i niezrównanej dyscyplinie, Delta Force
-                    pozostaje gotowa do działania w każdych warunkach, zapewniając bezpieczeństwo mieszkańcom stanu San Andreas. To symbol
-                    odwagi, profesjonalizmu i nieustannej gotowości do ochrony kraju przed wszelkimi zagrożeniami.
-                    </p>
-                </div>
+          </div>
+          <div class="flexRowWrapper leaderTier">
+            <div class="flexRowWrapper leaderProfile">
+              <div class="flexColumnWrapper avatarWrapper">
+                <div class="leaderAvatar"></div>
+                <div class="leaderRank lieutenantColonel"></div>
+              </div>
+              <div class="leaderDescription">
+                <ul>
+                  <li><span class="white">Jacob Stevens</span></li>
+                  <li><span class="italic">Lieutenant Colonel</span></li>
+                  <li><span class="italic">Deputy Platoon Commander</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="flexColumnWrapper">
-                <p class="sectionTextHeader">Historia</p>
-                <hr class="separatorLight">
-                <p class="sectionTextContent history">Historia Delta Force to opowieść o ciągłej ewolucji, adaptacji i doskonaleniu w obliczu dynamicznie zmieniających się
-                zagrożeń bezpieczeństwa w stanie San Andreas oraz poza jego granicami. Fundamenty tej elitarnej jednostki sięgają
-                września 2022 roku, kiedy to krótko po otwarciu Fort Zacundo została utworzona pierwsza specjalna formacja Quick
-                Reaction Force (QRF). Jej twórcą był William Fisher, wizjoner i strateg, który dostrzegł rosnące potrzeby w zakresie
-                szybkiego reagowania na kryzysowe sytuacje. Powstanie QRF było odpowiedzią na częste ataki na Fort Zacundo i wyspę Cayo
-                Perico oraz wzrastającą aktywność grup przestępczych destabilizujących bezpieczeństwo stanu San Andreas. Jednostka QRF
-                była pierwszą linią obrony, specjalizując się w błyskawicznych interwencjach i działaniach ratunkowych.</p>
-                <p class="sectionTextContent history">Jednak wraz z upływem czasu i zmianą charakteru zagrożeń okazało się, że szybka reakcja to za mało. Konieczne było
-                stworzenie bardziej wyspecjalizowanej jednostki, która mogłaby sprostać rosnącemu zagrożeniu terroryzmem wewnętrznym. 22
-                października 2023 roku, w odpowiedzi na te potrzeby, powołano Inter Terrorism Counteraction Unit (ITCU). Jej
-                założycielem był Ernest VarEmreis, doświadczony analityk i strateg bezpieczeństwa, którego wizja stworzenia jednostki
-                dedykowanej zwalczaniu terroryzmu wewnętrznego szybko zdobyła poparcie władz federalnych i lokalnych. ITCU została
-                stworzona z myślą o przeciwdziałaniu najbardziej zaawansowanym zagrożeniom terrorystycznym na terenie kraju, a jej
-                struktury zostały zaprojektowane z naciskiem na efektywność, współpracę i integrację z innymi agencjami bezpieczeństwa.</p>
-                <p class="sectionTextContent history">Pułkownik Connor Ghost, jeden z najbardziej szanowanych liderów Gwardii Narodowej stanu San Andreas, odegrał kluczową
-                rolę w mobilizacji zasobów i wsparcia dla ITCU. Dzięki swojemu doświadczeniu w dziedzinie obronności krajowej oraz
-                znajomości lokalnych zagrożeń był fundamentem sukcesu jednostki. Nieoceniony wkład w rozwój ITCU miał także Nathan
-                Brown, uznawany za wybitnego stratega logistyki w stanie San Andreas. Jego zaangażowanie doprowadziło do umocnienia
-                struktury ITCU oraz podpisania kluczowej umowy przekazującej jednostkę pod jurysdykcję Departamentu Bezpieczeństwa
-                Krajowego (DHS). Pod nadzorem DHS ITCU stała się integralną częścią narodowego systemu obrony, zyskując dostęp do
-                zaawansowanych zasobów i wiedzy, które umożliwiły jej skuteczne działanie.
-                </p>
+            <div class="flexRowWrapper leaderProfile">
+              <div class="flexColumnWrapper avatarWrapper">
+                <div class="leaderAvatar"></div>
+                <div class="leaderRank lieutenantColonel"></div>
+              </div>
+              <div class="leaderDescription">
+                <ul>
+                  <li><span class="white">Jack Howard</span></li>
+                  <li><span class="italic">Lieutenant Colonel</span></li>
+                  <li><span class="italic">Deputy Platoon Commander</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="flexRowWrapper">
-                <div class="historyPhoto itcu1 boxShadow"></div>
-                <div class="historyPhoto itcu2 boxShadow"></div>
+          </div>
+          <div class="flexRowWrapper leaderTier">
+            <div class="flexRowWrapper leaderProfile">
+              <div class="flexColumnWrapper avatarWrapper">
+                <div class="leaderAvatar"></div>
+                <div class="leaderRank major"></div>
+              </div>
+              <div class="leaderDescription">
+                <ul>
+                  <li><span class="white">Franz Gross</span></li>
+                  <li><span class="italic">Major</span></li>
+                  <li><span class="italic">Squadron Delta Force</span></li>
+                </ul>
+              </div>
             </div>
-            <div>
-            <p class="sectionTextContent history">Przez kilka lat QRF i ITCU funkcjonowały równolegle, pełniąc różne, lecz wzajemnie uzupełniające się role w systemie
-            bezpieczeństwa stanu San Andreas. Jednak dynamicznie rozwijająca się sytuacja geopolityczna oraz zmieniające się
-            charakterystyki zagrożeń wymagały nowego podejścia. Punktem zwrotnym była inicjatywa generała Kai Stonesa w czerwcu 2024
-            roku, który zaproponował kompleksową modernizację struktur specjalnych SANG. Na bazie ITCU powstała jednostka Delta
-            Force, mająca w pełni zintegrować i zoptymalizować działania specjalne Gwardii Narodowej.</p>
-            <p class="sectionTextContent history">Delta Force od samego początku była projektowana jako formacja łącząca najlepsze cechy swoich poprzedniczek – szybkość i
-            elastyczność QRF oraz precyzję i specjalistyczne podejście ITCU. Niedługo po jej utworzeniu jednostka QRF została
-            wcielona w struktury Delta Force, co umożliwiło pełną konsolidację doświadczeń i zasobów obu formacji. Proces ten był
-            kluczowym krokiem w kierunku stworzenia jednej, kompleksowej jednostki, zdolnej sprostać każdemu wyzwaniu, jakie mogłyby
-            stanąć przed San Andreas National Guard.</p>
-            <p class="sectionTextContent history">Przez kolejne miesiące Delta Force przechodziła intensywną integrację, wdrażając nowe procedury, opracowując
-            zaawansowane strategie działania i doskonaląc swoje zdolności operacyjne. Konsolidacja zasobów i doświadczeń z QRF i
-            ITCU pozwoliła na stworzenie jednostki o niespotykanej dotąd skuteczności. Delta Force zaczęła wyznaczać standardy w
-            operacjach specjalnych, a jej członkowie stali się symbolem odwagi, profesjonalizmu i zaangażowania.</p>
-            <p class="sectionTextContent history">Obecnie Delta Force to elitarna formacja, która działa na pierwszej linii obrony w stanie San Andreas. Jej historia to
-            dowód na to, jak ważna jest adaptacja, współpraca i ciągłe doskonalenie w obliczu nowych wyzwań. Dzięki determinacji
-            liderów i zaangażowaniu swoich członków, Delta Force jest gotowa stawić czoła każdemu zagrożeniu, zapewniając
-            bezpieczeństwo mieszkańcom San Andreas.</p>
+            <div class="flexRowWrapper leaderProfile">
+              <div class="flexColumnWrapper avatarWrapper">
+                <div class="leaderAvatar"></div>
+                <div class="leaderRank chiefWarrantOfficer"></div>
+              </div>
+              <div class="leaderDescription">
+                <ul>
+                  <li><span class="white">Matthew Quinn</span></li>
+                  <li><span class="italic">Chief Warrant Officer</span></li>
+                  <li><span class="italic">Squadron Delta Force</span></li>
+                </ul>
+              </div>
             </div>
-        </section>
-        <div class="backgroundPhotoSeparator photo01"></div>
-        <section class="whatWeDo">
-            <div class="flexColumnWrapper">
-                <p class="sectionTextHeader">Jak działamy?</p>
-                <hr class="separatorBlack">
-                <p class="sectionTextContent history">Delta Force to elitarna jednostka specjalna, której działania opierają się na precyzji, szybkości i skuteczności.
-                Realizujemy szeroki zakres misji – od szybkiego reagowania na zagrożenia i ochrony kluczowych obiektów, po operacje
-                antyterrorystyczne i działania ratunkowe.
-                Dzięki zaawansowanemu wyposażeniu, stałym szkoleniom i współpracy z innymi agencjami, jesteśmy w stanie skutecznie
-                reagować na każde zagrożenie. Elastyczność i zdolność adaptacji pozwalają nam działać w każdych warunkach, zapewniając
-                bezpieczeństwo i stabilność w stanie San Andreas.</p>
+            <div class="flexRowWrapper leaderProfile">
+              <div class="flexColumnWrapper avatarWrapper">
+                <div class="leaderAvatar"></div>
+                <div class="leaderRank major"></div>
+              </div>
+              <div class="leaderDescription">
+                <ul>
+                  <li><span class="white">Jacob Salvatore</span></li>
+                  <li><span class="italic">Major</span></li>
+                  <li><span class="italic">Squadron Delta Force</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="flexColumnWrapper">
-                <iframe class="videoPlayer boxShadow" src="https://www.youtube.com/embed/hBom-shyi4M"></iframe>
+          </div>
+          <p class="sectionTextHeaderSmall">Opiekunowie Jednostki</p>
+          <hr class="separatorLight" />
+          <div class="flexRowWrapper leaderTier">
+            <div class="flexRowWrapper leaderProfile">
+              <div class="flexColumnWrapper avatarWrapper">
+                <div class="leaderAvatar"></div>
+                <div class="leaderRank lieutenantGeneral"></div>
+              </div>
+              <div class="leaderDescription">
+                <ul>
+                  <li><span class="white">Michael Poletko</span></li>
+                  <li><span class="italic">Lieutenant General</span></li>
+                  <li><span class="italic">SANG HQ</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="flexRowWrapper">
-                <div class="imageWrapper">
-                    <div class="sectionImage patrol1 whatWeDoPhoto boxShadow"></div>
-                </div>
-                <div class="flexColumnWrapper">
-                    <p class="sectionTextHeaderSmall">Obrona infrastruktury</p>
-                    <hr class="separatorBlack">
-                    <p class="sectionTextContent">Delta Force odgrywa kluczową rolę w obronie strategicznych lokalizacji, takich jak Fort Zacundo i wyspa Cayo Perico.
-                    Naszym priorytetem jest ochrona tych kluczowych punktów przed atakami zorganizowanych grup przestępczych, które mogą
-                    zagrażać bezpieczeństwu narodowemu.</p>
-                    <p class="sectionTextContent">Nasi operatorzy są stale gotowi do działania, monitorując zagrożenia i reagując na każdą próbę naruszenia
-                    bezpieczeństwa. Dzięki zaawansowanemu wyposażeniu, ścisłej koordynacji i precyzyjnie opracowanym procedurom jesteśmy w
-                    stanie szybko neutralizować zagrożenia i zapewniać pełne bezpieczeństwo na tych kluczowych obszarach. Delta Force stoi
-                    na straży Fortu Zacundo i wyspy Cayo Perico, będąc nieprzerwanie gotową do obrony przed każdą formą agresji.
-                    </p>
-                </div>
+            <div class="flexRowWrapper leaderProfile">
+              <div class="flexColumnWrapper avatarWrapper">
+                <div class="leaderAvatar"></div>
+                <div class="leaderRank lieutenantGeneral"></div>
+              </div>
+              <div class="leaderDescription">
+                <ul>
+                  <li><span class="white">Logan Tee</span></li>
+                  <li><span class="italic">Lieutenant General</span></li>
+                  <li><span class="italic">SANG HQ</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="flexRowWrapper">
-                <div class="flexColumnWrapper">
-                    <p class="sectionTextHeaderSmall">Wsparcie operacyjne</p>
-                    <hr class="separatorBlack">
-                    <p class="sectionTextContent">Delta Force aktywnie wspiera inne frakcje państwowe w sytuacjach wymagających zaawansowanego wsparcia operacyjnego.
-                    Nasze działania obejmują reakcję na marki c0, neutralizację oraz obstawa napadów na banki i biznesy oraz udział w pościgach za
-                    szczególnie niebezpiecznymi przestępcami.</p>
-                    <p class="sectionTextContent">Dzięki ścisłej współpracy z lokalnymi służbami, szybkości działania i doskonałemu przygotowaniu, skutecznie wspieramy
-                    egzekwowanie prawa na najwyższym poziomie. Delta Force zapewnia kluczowe wsparcie tam, gdzie precyzja i profesjonalizm
-                    są niezbędne, aby przywrócić bezpieczeństwo i porządek.
-                    </p>
-                </div>
-                <div class="imageWrapper">
-                    <div class="sectionImage patrol1 whatWeDoPhoto boxShadow"></div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <div class="backgroundPhotoSeparator photo03"></div>
+      <footer>
+        <div class="flexColumnWrapper">
+          <div class="flexRowWrapper">
+            <div class="footerBox">
+              <a href="https://www.youtube.com/@Deltaforcesang" target="_blank">
+                <img
+                  class="youtube"
+                  src="img/youtube2.png"
+                  alt="Oficjalny kanał YouTube"
+                />
+              </a>
             </div>
-            <div class="flexRowWrapper">
-                <div class="imageWrapper">
-                    <div class="sectionImage patrol1 whatWeDoPhoto boxShadow"></div>
-                </div>
-                <div class="flexColumnWrapper">
-                    <p class="sectionTextHeaderSmall">Szkolenia</p>
-                    <hr class="separatorBlack">
-                    <p class="sectionTextContent">Delta Force pełni kluczową rolę w podnoszeniu kompetencji służb państwowych poprzez realizację specjalistycznych szkoleń
-                    z zakresu procedur i strategii operacyjnych. Organizujemy dedykowane kursy zarówno dla członków San Andreas National
-                    Guard, jak i funkcjonariuszy innych frakcji państwowych, dzieląc się wiedzą i doświadczeniem w obszarze działań
-                    taktycznych i zarządzania kryzysowego.</p>
-                    <p class="sectionTextContent">Jednocześnie prowadzimy intensywne, wewnętrzne szkolenia dla naszych żołnierzy i rekrutów, koncentrując się na
-                    sprawności fizycznej, wytrzymałości oraz umiejętnościach praktycznych. Dzięki temu nasze szeregi zasilają wyłącznie
-                    doskonale przygotowani specjaliści, gotowi sprostać każdemu wyzwaniu. Szkolenia Delta Force to gwarancja najwyższego
-                    poziomu przygotowania i profesjonalizmu.
-                    </p>
-                </div>
+            <div class="verticalSeparator"></div>
+            <div class="flexColumnWrapper footerBox footerLogos">
+              <img class="footer" src="img/sang.png" alt="" />
+              <img class="footer" src="img/logo.png" alt="" />
             </div>
-            <div class="flexRowWrapper">
-                <div class="flexColumnWrapper">
-                    <p class="sectionTextHeaderSmall">Działania saperskie</p>
-                    <hr class="separatorBlack">
-                    <p class="sectionTextContent">Delta Force prowadzi działania związane z rozbrajaniem ładunków wybuchowych oraz neutralizacją zagrożeń wynikających z
-                    użycia materiałów wybuchowych. W naszych szeregach znajdują się wyspecjalizowani operatorzy saperscy, którzy dzięki
-                    swojej wiedzy, doświadczeniu i zaawansowanym umiejętnościom są w stanie skutecznie identyfikować, zabezpieczać i
-                    neutralizować różnego rodzaju ładunki, w tym improwizowane urządzenia wybuchowe (IED). Dzięki precyzyjnemu przygotowaniu
-                    i pracy zespołowej Delta Force stanowi kluczową linię obrony przed zagrożeniami wybuchowymi na terenie Fortu Zacundo,
-                    wyspy Cayo Perico oraz w całym stanie San Andreas.</p>
-                    
-                </div>
-                <div class="imageWrapper">
-                    <div class="sectionImage patrol1 whatWeDoPhoto boxShadow"></div>
-                </div>
+            <div class="verticalSeparator"></div>
+            <div class="footerBox majesticLogo">
+              <a href="https://gta5majestic.com/" target="_blank">
+                <svg
+                  class="majestic"
+                  viewBox="0 0 120 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="logo"
+                  data-v-3245a8bd=""
+                >
+                  <path
+                    d="M37.3123 7.44916C39.5823 7.44916 41.2746 8.27202 42.3752 9.90342L42.8293 7.87476H48.0853L44.3981 24.9979H39.1283L39.541 23.0118C38.1927 24.6148 36.6105 25.4238 34.7945 25.4238C32.8959 25.4238 31.3825 24.7991 30.2543 23.5654C29.1262 22.317 28.5622 20.5865 28.5622 18.3305C28.5604 16.609 28.8828 14.9034 29.5114 13.3085C30.1465 11.6793 31.1798 10.2473 32.5107 9.15186C33.8727 8.0166 35.4687 7.44916 37.3123 7.44916ZM38.234 12.2725C37.0234 12.2725 36.0189 12.7548 35.221 13.7054C34.4231 14.656 34.0375 15.8334 34.0375 17.1953C34.0375 18.2168 34.3543 19.0395 34.973 19.6638C35.5917 20.288 36.3626 20.6 37.2842 20.6C38.4949 20.6 39.5405 20.0609 40.4211 18.997L41.563 13.8189C40.7517 12.7833 39.6511 12.2725 38.234 12.2725Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    d="M77.7289 25.4235C76.1848 25.4282 74.6521 25.1496 73.2026 24.6007C71.8257 24.1051 70.5649 23.3173 69.5016 22.2882L72.2945 18.7695C72.8861 19.4079 73.7529 20.018 74.8946 20.5857C76.0363 21.1534 77.1371 21.4369 78.2103 21.4369C78.7331 21.4369 79.1596 21.3234 79.4897 21.0822C79.8066 20.841 79.9712 20.5431 79.9712 20.1885C79.9712 19.7204 79.5448 19.2948 78.678 18.9401C77.754 18.5649 76.8073 18.2522 75.8438 18.0038C74.7895 17.7231 73.8169 17.1828 73.0097 16.4291C72.594 16.0619 72.2625 15.6044 72.0389 15.0893C71.8153 14.5742 71.7052 14.0144 71.7164 13.4502C71.7164 11.7903 72.3493 10.3718 73.6288 9.19424C74.9084 8.0167 76.6421 7.42072 78.8433 7.42072C80.2266 7.41757 81.6 7.66238 82.9019 8.14421C84.1394 8.58385 85.2769 9.27896 86.2451 10.1871L83.6999 13.5635C83.2183 13.0244 82.5163 12.5279 81.5948 12.088C80.7354 11.6642 79.7959 11.4413 78.8432 11.4355C78.2654 11.4355 77.8114 11.5489 77.4812 11.7901C77.151 12.0313 76.9859 12.315 76.9859 12.6413C76.9859 12.9677 77.2748 13.266 77.8526 13.5067C78.528 13.7971 79.2222 14.0389 79.9301 14.2302C80.7546 14.4752 81.5633 14.7737 82.3514 15.1239C83.1479 15.4774 83.8543 16.0164 84.4151 16.6986C84.9929 17.3937 85.2818 18.2449 85.2818 19.238C85.2818 21.0113 84.5939 22.4866 83.2316 23.65C81.8563 24.8418 80.0266 25.4235 77.7289 25.4235Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    d="M62.7808 25.4239C60.098 25.4239 57.9517 24.7382 56.342 23.3669C54.7324 21.9908 53.9344 20.09 53.9344 17.6492C53.9344 14.8403 54.8562 12.4333 56.6997 10.4283C58.5433 8.42798 60.8638 7.4302 63.6612 7.43494C65.835 7.43494 67.651 8.11587 69.1094 9.49194C70.5678 10.868 71.2969 12.7548 71.2969 15.1665C71.2947 16.1699 71.1793 17.1696 70.9529 18.1455H59.19V18.3582C59.19 18.9256 59.5477 19.5357 60.2769 20.2025C61.0061 20.8693 61.9691 21.1955 63.1798 21.1955C64.8308 21.1955 66.1241 20.8408 67.0734 20.1314L68.6968 23.749C67.1146 24.8702 65.1472 25.4239 62.7808 25.4239ZM59.7265 14.6132H66.6055C66.633 14.5848 66.6468 14.4997 66.6468 14.3579C66.6468 13.6912 66.3717 13.0811 65.8351 12.5136C65.2985 11.9462 64.5006 11.6624 63.4412 11.6624C62.5426 11.6492 61.6709 11.9776 60.9922 12.5849C60.3044 13.1947 59.8778 13.8756 59.7265 14.6132Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    d="M44.5581 32C42.3155 32 40.6645 31.5303 39.6052 30.5766L41.7377 26.662C42.2192 27.2314 42.8933 27.5161 43.7738 27.5161C45.0121 27.5161 45.8241 26.6336 46.2228 24.8831L49.9099 7.82998H55.2068L51.5058 24.8827C50.5153 29.6228 48.1993 31.9953 44.5581 32ZM53.1981 6.3064C52.4002 6.3064 51.7397 6.0359 51.2169 5.50882C50.9672 5.26339 50.7697 4.96706 50.6371 4.63866C50.5044 4.31027 50.4395 3.957 50.4465 3.60134C50.4465 2.50528 50.8042 1.63687 51.5334 0.982086C52.2626 0.327297 53.0468 0.000479041 53.886 0.000479041C54.6702 0.000479041 55.3168 0.256667 55.8259 0.783362C56.074 1.02402 56.2707 1.31544 56.4034 1.63899C56.536 1.96253 56.6017 2.31107 56.5963 2.6623C56.5963 3.75836 56.2386 4.62667 55.5232 5.29529C54.8215 5.97901 54.0373 6.3064 53.1981 6.3064Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    d="M105.34 2.6671C105.34 3.75951 104.982 4.62484 104.267 5.29164C103.551 5.95844 102.781 6.28469 101.928 6.28469C101.13 6.28469 100.469 6.01562 99.9464 5.49027C99.6968 5.24609 99.4994 4.9509 99.3667 4.62358C99.2341 4.29626 99.1691 3.94401 99.1759 3.58933C99.1759 2.49702 99.5336 1.63159 100.263 0.979011C100.992 0.326432 101.776 0 102.616 0C103.4 0 104.047 0.255322 104.556 0.780191C104.807 1.02087 105.006 1.31309 105.141 1.63807C105.276 1.96304 105.344 2.31357 105.34 2.6671Z"
+                    fill="url(#paint0_radial_11_1715)"
+                  ></path>
+                  <path
+                    d="M26.044 24.9403H20.1281L23.4712 9.29264L14.3084 24.9403H11.6943L9.24543 9.29264L5.91594 24.9403H0L5.06295 1.29141H13.0701L15.065 14.3713L22.6737 1.29141H31.0936L26.044 24.9403Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    d="M92.1691 25.3659C90.4906 25.3659 89.1561 25.0254 88.1656 24.3586C87.175 23.6918 86.6659 22.6705 86.6659 21.3227C86.6738 20.9044 86.7106 20.4872 86.776 20.0743L88.3994 12.5129H85.6478L86.6796 7.78876H89.4314L90.4356 3.10732H95.7187L94.7144 7.78886H98.085L97.0531 12.513H93.6825L92.4443 18.3295C92.3769 18.584 92.34 18.846 92.3342 19.1098C92.3342 20.0602 92.857 20.5284 93.9165 20.5284C94.3705 20.5284 94.7145 20.4291 94.9483 20.2446L95.0171 24.6141C94.4117 25.1248 93.4624 25.3659 92.1691 25.3659Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    d="M98.626 7.87448L94.9527 24.9977H100.25L103.936 7.86035H98.626V7.87448Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    d="M111.146 25.4235C108.573 25.4235 106.519 24.6952 104.982 23.2388C103.441 21.7775 102.671 19.8907 102.671 17.55C102.671 14.7127 103.616 12.3199 105.505 10.3717C107.39 8.42814 109.725 7.454 112.508 7.44926C115.851 7.44926 118.204 8.60784 119.566 10.925L115.604 14.0176C114.916 12.8544 113.87 12.2727 112.467 12.2727C111.187 12.2727 110.128 12.755 109.289 13.7056C108.45 14.6703 108.037 15.8336 108.037 17.238C108.037 18.2736 108.381 19.0964 109.069 19.7065C109.756 20.3162 110.623 20.6141 111.655 20.6141C112.865 20.6141 113.911 20.1034 114.792 19.082L117.653 22.6712C116.965 23.4231 116.057 24.0756 114.929 24.629C113.815 25.1539 112.549 25.4235 111.146 25.4235Z"
+                    fill="white"
+                  ></path>
+                  <defs>
+                    <radialGradient
+                      id="paint0_radial_11_1715"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(-440.979 -44.3412) scale(59.3844 16.0749)"
+                    >
+                      <stop stop-color="#FF6CBD"></stop>
+                      <stop offset="1" stop-color="#DF005B"></stop>
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </a>
             </div>
-            <div class="flexColumnWrapper">
-                <hr class="separatorBlack">
-                <p class="sectionTextContent history quote">&rdquo;Delta nie pyta, Delta nie zwleka&bdquo;</p>
-            </div>
-        </section>
-        <div class="backgroundPhotoSeparator photo02"></div>
-        <section class="leaderboard">
-            <div class="flexColumnWrapper">
-                <p class="sectionTextHeader">Zarząd Delta Force</p>
-                <hr class="separatorLight">
-                <div class="flexRowWrapper leaderTier">
-                    <div class="flexRowWrapper leaderProfile">
-                        <div class="flexColumnWrapper avatarWrapper">
-                            <div class="leaderAvatar"></div>
-                            <div class="leaderRank colonel"></div>
-                        </div>
-                        <div class="leaderDescription">
-                            <ul>
-                                <li><span class="white">Ezekiell Vesperra</span></li>
-                                <li><span class="italic">Colonel</span></li>
-                                <li><span class="italic">Platoon Commander</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="flexRowWrapper leaderTier">
-                    <div class="flexRowWrapper leaderProfile">
-                        <div class="flexColumnWrapper avatarWrapper">
-                            <div class="leaderAvatar"></div>
-                            <div class="leaderRank lieutenantColonel"></div>
-                        </div>
-                        <div class="leaderDescription">
-                            <ul>
-                                <li><span class="white">Jacob Stevens</span></li>
-                                <li><span class="italic">Lieutenant Colonel</span></li>
-                                <li><span class="italic">Deputy Platoon Commander</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flexRowWrapper leaderProfile">
-                        <div class="flexColumnWrapper avatarWrapper">
-                            <div class="leaderAvatar"></div>
-                            <div class="leaderRank lieutenantColonel"></div>
-                        </div>
-                        <div class="leaderDescription">
-                            <ul>
-                                <li><span class="white">Jack Howard</span></li>
-                                <li><span class="italic">Lieutenant Colonel</span></li>
-                                <li><span class="italic">Deputy Platoon Commander</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="flexRowWrapper leaderTier">
-                    <div class="flexRowWrapper leaderProfile">
-                        <div class="flexColumnWrapper avatarWrapper">
-                            <div class="leaderAvatar"></div>
-                            <div class="leaderRank major"></div>
-                        </div>
-                        <div class="leaderDescription">
-                            <ul>
-                                <li><span class="white">Franz Gross</span></li>
-                                <li><span class="italic">Major</span></li>
-                                <li><span class="italic">Squadron Delta Force</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flexRowWrapper leaderProfile">
-                        <div class="flexColumnWrapper avatarWrapper">
-                            <div class="leaderAvatar"></div>
-                            <div class="leaderRank chiefWarrantOfficer"></div>
-                        </div>
-                        <div class="leaderDescription">
-                            <ul>
-                                <li><span class="white">Matthew Quinn</span></li>
-                                <li><span class="italic">Chief Warrant Officer</span></li>
-                                <li><span class="italic">Squadron Delta Force</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flexRowWrapper leaderProfile">
-                        <div class="flexColumnWrapper avatarWrapper">
-                            <div class="leaderAvatar"></div>
-                            <div class="leaderRank major"></div>
-                        </div>
-                        <div class="leaderDescription">
-                            <ul>
-                                <li><span class="white">Jacob Salvatore</span></li>
-                                <li><span class="italic">Major</span></li>
-                                <li><span class="italic">Squadron Delta Force</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <p class="sectionTextHeaderSmall">Opiekunowie Jednostki</p>
-                <hr class="separatorLight">
-                <div class="flexRowWrapper leaderTier">
-                    <div class="flexRowWrapper leaderProfile">
-                        <div class="flexColumnWrapper avatarWrapper">
-                            <div class="leaderAvatar"></div>
-                            <div class="leaderRank lieutenantGeneral"></div>
-                        </div>
-                        <div class="leaderDescription">
-                            <ul>
-                                <li><span class="white">Michael Poletko</span></li>
-                                <li><span class="italic">Lieutenant General</span></li>
-                                <li><span class="italic">SANG HQ</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flexRowWrapper leaderProfile">
-                        <div class="flexColumnWrapper avatarWrapper">
-                            <div class="leaderAvatar"></div>
-                            <div class="leaderRank lieutenantGeneral"></div>
-                        </div>
-                        <div class="leaderDescription">
-                            <ul>
-                                <li><span class="white">Logan Tee</span></li>
-                                <li><span class="italic">Lieutenant General</span></li>
-                                <li><span class="italic">SANG HQ</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="backgroundPhotoSeparator photo03"></div>
-        <footer>
-            <div class="flexColumnWrapper">
-                <div class="flexRowWrapper">
-                    <div class="footerBox">
-                        <a href="https://www.youtube.com/@Deltaforcesang" target="_blank">
-                            <img class="youtube" src="img/youtube2.png" alt="Oficjalny kanał YouTube">
-                        </a>
-                    </div>
-                    <div class="verticalSeparator"></div>
-                    <div class="flexColumnWrapper footerBox footerLogos">
-                        <img class="footer" src="img/sang.png" alt="">
-                        <img class="footer" src="img/logo.png" alt="">
-                    </div>
-                    <div class="verticalSeparator"></div>
-                    <div class="footerBox majesticLogo">
-                        <a href="https://gta5majestic.com/" target="_blank">
-                            <svg class="majestic" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo" data-v-3245a8bd="">
-                                <path
-                                    d="M37.3123 7.44916C39.5823 7.44916 41.2746 8.27202 42.3752 9.90342L42.8293 7.87476H48.0853L44.3981 24.9979H39.1283L39.541 23.0118C38.1927 24.6148 36.6105 25.4238 34.7945 25.4238C32.8959 25.4238 31.3825 24.7991 30.2543 23.5654C29.1262 22.317 28.5622 20.5865 28.5622 18.3305C28.5604 16.609 28.8828 14.9034 29.5114 13.3085C30.1465 11.6793 31.1798 10.2473 32.5107 9.15186C33.8727 8.0166 35.4687 7.44916 37.3123 7.44916ZM38.234 12.2725C37.0234 12.2725 36.0189 12.7548 35.221 13.7054C34.4231 14.656 34.0375 15.8334 34.0375 17.1953C34.0375 18.2168 34.3543 19.0395 34.973 19.6638C35.5917 20.288 36.3626 20.6 37.2842 20.6C38.4949 20.6 39.5405 20.0609 40.4211 18.997L41.563 13.8189C40.7517 12.7833 39.6511 12.2725 38.234 12.2725Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M77.7289 25.4235C76.1848 25.4282 74.6521 25.1496 73.2026 24.6007C71.8257 24.1051 70.5649 23.3173 69.5016 22.2882L72.2945 18.7695C72.8861 19.4079 73.7529 20.018 74.8946 20.5857C76.0363 21.1534 77.1371 21.4369 78.2103 21.4369C78.7331 21.4369 79.1596 21.3234 79.4897 21.0822C79.8066 20.841 79.9712 20.5431 79.9712 20.1885C79.9712 19.7204 79.5448 19.2948 78.678 18.9401C77.754 18.5649 76.8073 18.2522 75.8438 18.0038C74.7895 17.7231 73.8169 17.1828 73.0097 16.4291C72.594 16.0619 72.2625 15.6044 72.0389 15.0893C71.8153 14.5742 71.7052 14.0144 71.7164 13.4502C71.7164 11.7903 72.3493 10.3718 73.6288 9.19424C74.9084 8.0167 76.6421 7.42072 78.8433 7.42072C80.2266 7.41757 81.6 7.66238 82.9019 8.14421C84.1394 8.58385 85.2769 9.27896 86.2451 10.1871L83.6999 13.5635C83.2183 13.0244 82.5163 12.5279 81.5948 12.088C80.7354 11.6642 79.7959 11.4413 78.8432 11.4355C78.2654 11.4355 77.8114 11.5489 77.4812 11.7901C77.151 12.0313 76.9859 12.315 76.9859 12.6413C76.9859 12.9677 77.2748 13.266 77.8526 13.5067C78.528 13.7971 79.2222 14.0389 79.9301 14.2302C80.7546 14.4752 81.5633 14.7737 82.3514 15.1239C83.1479 15.4774 83.8543 16.0164 84.4151 16.6986C84.9929 17.3937 85.2818 18.2449 85.2818 19.238C85.2818 21.0113 84.5939 22.4866 83.2316 23.65C81.8563 24.8418 80.0266 25.4235 77.7289 25.4235Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M62.7808 25.4239C60.098 25.4239 57.9517 24.7382 56.342 23.3669C54.7324 21.9908 53.9344 20.09 53.9344 17.6492C53.9344 14.8403 54.8562 12.4333 56.6997 10.4283C58.5433 8.42798 60.8638 7.4302 63.6612 7.43494C65.835 7.43494 67.651 8.11587 69.1094 9.49194C70.5678 10.868 71.2969 12.7548 71.2969 15.1665C71.2947 16.1699 71.1793 17.1696 70.9529 18.1455H59.19V18.3582C59.19 18.9256 59.5477 19.5357 60.2769 20.2025C61.0061 20.8693 61.9691 21.1955 63.1798 21.1955C64.8308 21.1955 66.1241 20.8408 67.0734 20.1314L68.6968 23.749C67.1146 24.8702 65.1472 25.4239 62.7808 25.4239ZM59.7265 14.6132H66.6055C66.633 14.5848 66.6468 14.4997 66.6468 14.3579C66.6468 13.6912 66.3717 13.0811 65.8351 12.5136C65.2985 11.9462 64.5006 11.6624 63.4412 11.6624C62.5426 11.6492 61.6709 11.9776 60.9922 12.5849C60.3044 13.1947 59.8778 13.8756 59.7265 14.6132Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M44.5581 32C42.3155 32 40.6645 31.5303 39.6052 30.5766L41.7377 26.662C42.2192 27.2314 42.8933 27.5161 43.7738 27.5161C45.0121 27.5161 45.8241 26.6336 46.2228 24.8831L49.9099 7.82998H55.2068L51.5058 24.8827C50.5153 29.6228 48.1993 31.9953 44.5581 32ZM53.1981 6.3064C52.4002 6.3064 51.7397 6.0359 51.2169 5.50882C50.9672 5.26339 50.7697 4.96706 50.6371 4.63866C50.5044 4.31027 50.4395 3.957 50.4465 3.60134C50.4465 2.50528 50.8042 1.63687 51.5334 0.982086C52.2626 0.327297 53.0468 0.000479041 53.886 0.000479041C54.6702 0.000479041 55.3168 0.256667 55.8259 0.783362C56.074 1.02402 56.2707 1.31544 56.4034 1.63899C56.536 1.96253 56.6017 2.31107 56.5963 2.6623C56.5963 3.75836 56.2386 4.62667 55.5232 5.29529C54.8215 5.97901 54.0373 6.3064 53.1981 6.3064Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M105.34 2.6671C105.34 3.75951 104.982 4.62484 104.267 5.29164C103.551 5.95844 102.781 6.28469 101.928 6.28469C101.13 6.28469 100.469 6.01562 99.9464 5.49027C99.6968 5.24609 99.4994 4.9509 99.3667 4.62358C99.2341 4.29626 99.1691 3.94401 99.1759 3.58933C99.1759 2.49702 99.5336 1.63159 100.263 0.979011C100.992 0.326432 101.776 0 102.616 0C103.4 0 104.047 0.255322 104.556 0.780191C104.807 1.02087 105.006 1.31309 105.141 1.63807C105.276 1.96304 105.344 2.31357 105.34 2.6671Z"
-                                    fill="url(#paint0_radial_11_1715)"></path>
-                                <path
-                                    d="M26.044 24.9403H20.1281L23.4712 9.29264L14.3084 24.9403H11.6943L9.24543 9.29264L5.91594 24.9403H0L5.06295 1.29141H13.0701L15.065 14.3713L22.6737 1.29141H31.0936L26.044 24.9403Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M92.1691 25.3659C90.4906 25.3659 89.1561 25.0254 88.1656 24.3586C87.175 23.6918 86.6659 22.6705 86.6659 21.3227C86.6738 20.9044 86.7106 20.4872 86.776 20.0743L88.3994 12.5129H85.6478L86.6796 7.78876H89.4314L90.4356 3.10732H95.7187L94.7144 7.78886H98.085L97.0531 12.513H93.6825L92.4443 18.3295C92.3769 18.584 92.34 18.846 92.3342 19.1098C92.3342 20.0602 92.857 20.5284 93.9165 20.5284C94.3705 20.5284 94.7145 20.4291 94.9483 20.2446L95.0171 24.6141C94.4117 25.1248 93.4624 25.3659 92.1691 25.3659Z"
-                                    fill="white"></path>
-                                <path d="M98.626 7.87448L94.9527 24.9977H100.25L103.936 7.86035H98.626V7.87448Z" fill="white"></path>
-                                <path
-                                    d="M111.146 25.4235C108.573 25.4235 106.519 24.6952 104.982 23.2388C103.441 21.7775 102.671 19.8907 102.671 17.55C102.671 14.7127 103.616 12.3199 105.505 10.3717C107.39 8.42814 109.725 7.454 112.508 7.44926C115.851 7.44926 118.204 8.60784 119.566 10.925L115.604 14.0176C114.916 12.8544 113.87 12.2727 112.467 12.2727C111.187 12.2727 110.128 12.755 109.289 13.7056C108.45 14.6703 108.037 15.8336 108.037 17.238C108.037 18.2736 108.381 19.0964 109.069 19.7065C109.756 20.3162 110.623 20.6141 111.655 20.6141C112.865 20.6141 113.911 20.1034 114.792 19.082L117.653 22.6712C116.965 23.4231 116.057 24.0756 114.929 24.629C113.815 25.1539 112.549 25.4235 111.146 25.4235Z"
-                                    fill="white"></path>
-                                <defs>
-                                    <radialGradient id="paint0_radial_11_1715" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                                        gradientTransform="translate(-440.979 -44.3412) scale(59.3844 16.0749)">
-                                        <stop stop-color="#FF6CBD"></stop>
-                                        <stop offset="1" stop-color="#DF005B"></stop>
-                                    </radialGradient>
-                                </defs>
-                            </svg>
-                        </a> 
-                    </div>  
-                </div>
-                <p class="footerCopy">&copy; 2025 Delta Force</p>
-            </div>            
-        </footer>
+          </div>
+          <p class="footerCopy">&copy; 2025 Delta Force</p>
+        </div>
+      </footer>
     </div>
     <script src="main.js" type="module"></script>
-</body>
+  </body>
 </html>

@@ -1,4 +1,5 @@
 const hamburgerIcon = document.querySelector('.hamburgerIcon');
+const mediaQuery = window.matchMedia('(min-width: 1150px)');
 
 function updateFavicons() {
   const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -77,96 +78,82 @@ function scrollToAboutSection(duration = 2000, section) {
   const aboutSection = document.querySelector(section);
 
   if (!aboutSection) {
-    console.error('Sekcja z klasą "about" nie została znaleziona.');
+    console.error('Sekcja nie została znaleziona.');
     return;
   }
 
-  const startPosition = window.pageYOffset; // Początkowa pozycja scrolla
+  const startPosition = window.pageYOffset;
   const targetPosition =
-    aboutSection.getBoundingClientRect().top + window.pageYOffset; // Pozycja docelowa
-  const distance = targetPosition - startPosition; // Całkowity dystans do przewinięcia
+    aboutSection.getBoundingClientRect().top + window.pageYOffset;
+  const distance = targetPosition - startPosition;
   let startTime = null;
 
-  // Funkcja animacji
   function animation(currentTime) {
     if (startTime === null) startTime = currentTime;
     const timeElapsed = currentTime - startTime;
-    const progress = Math.min(timeElapsed / duration, 1); // Upewnij się, że nie przekracza 1
-
-    // Easing (płynność)
+    const progress = Math.min(timeElapsed / duration, 1);
     const ease = easeInOutQuad(progress);
 
-    window.scrollTo(0, startPosition + distance * ease); // Przewiń do nowej pozycji
+    window.scrollTo(0, startPosition + distance * ease);
 
     if (timeElapsed < duration) {
-      requestAnimationFrame(animation); // Kontynuuj animację
+      requestAnimationFrame(animation);
     }
   }
 
-  // Funkcja easing (możesz zmienić na inną)
   function easeInOutQuad(t) {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
   }
 
-  requestAnimationFrame(animation); // Rozpocznij animację
+  requestAnimationFrame(animation);
   toggleMenu();
 }
 
-let lastScrollTop = 0; // Zmienna do przechowywania ostatniej pozycji scrolla
-const nav = document.querySelector('nav'); // Wybór elementu nawigacji
+let lastScrollTop = 0;
+const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', function () {
   const currentScroll =
-    window.pageYOffset || document.documentElement.scrollTop; // Aktualna pozycja scrolla
+    window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll > lastScrollTop) {
-    // Scrollowanie w dół
-    if (mediaQuery.matches) nav.classList.add('off'); // Usunięcie klasy "on"
+    if (mediaQuery.matches) nav.classList.add('off');
   } else {
-    // Scrollowanie w górę
-    if (mediaQuery.matches) nav.classList.remove('off'); // Dodanie klasy "on"
+    if (mediaQuery.matches) nav.classList.remove('off');
   }
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Aktualizacja ostatniej pozycji scrolla
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
-// zmiana tła
+// background image change
 
-// Funkcja do dodawania i usuwania klasy bg2
 function toggleBgClass(classPhoto, bgClass) {
   const targetElement = document.querySelector(classPhoto);
   const bodyElement = document.body;
   const logo = document.querySelector('.logo');
 
-  // Użycie Intersection Observer
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Dodaj klasę bg2, gdy element jest widoczny
         bodyElement.classList.add(bgClass);
         if (bgClass == 'bg1') logo.classList.remove('hide');
       } else {
-        // Usuń klasę bg2, gdy element nie jest widoczny
         bodyElement.classList.remove(bgClass);
         if (bgClass == 'bg1') logo.classList.add('hide');
       }
     });
   });
 
-  // Obserwuj element
   if (targetElement) {
     observer.observe(targetElement);
   }
 }
-
-const mediaQuery = window.matchMedia('(min-width: 1150px)');
 
 if (mediaQuery.matches) {
   nav.classList.remove('off');
   hamburgerIcon.classList.add('hide');
 }
 
-// Opcjonalnie: nasłuchiwanie zmian
 mediaQuery.addEventListener('change', (e) => {
   if (e.matches) {
     nav.classList.remove('off');
@@ -175,33 +162,6 @@ mediaQuery.addEventListener('change', (e) => {
     nav.classList.add('off');
     hamburgerIcon.classList.remove('hide');
   }
-});
-
-// Wywołaj funkcję po załadowaniu strony
-document.addEventListener('DOMContentLoaded', toggleBgClass('.photo00', 'bg1'));
-document.addEventListener('DOMContentLoaded', toggleBgClass('.photo01', 'bg2'));
-document.addEventListener('DOMContentLoaded', toggleBgClass('.photo02', 'bg3'));
-document.addEventListener('DOMContentLoaded', toggleBgClass('.photo03', 'bg4'));
-
-// Wywołanie funkcji
-// scrollToAboutSection(2000); // Przewiń w ciągu 2 sekund
-
-// Wywołanie funkcji
-// scrollToAboutSection();
-document.querySelector('.link0').addEventListener('click', () => {
-  scrollToAboutSection(2000, '.wrapper');
-});
-
-document.querySelector('.link1').addEventListener('click', () => {
-  scrollToAboutSection(2000, '.about');
-});
-
-document.querySelector('.link2').addEventListener('click', () => {
-  scrollToAboutSection(3000, '.whatWeDo');
-});
-
-document.querySelector('.link3').addEventListener('click', () => {
-  scrollToAboutSection(3000, '.leaderboard');
 });
 
 function toggleMenu() {
@@ -214,3 +174,23 @@ function toggleMenu() {
 }
 
 hamburgerIcon.addEventListener('click', toggleMenu);
+document.addEventListener('DOMContentLoaded', toggleBgClass('.photo00', 'bg1'));
+document.addEventListener('DOMContentLoaded', toggleBgClass('.photo01', 'bg2'));
+document.addEventListener('DOMContentLoaded', toggleBgClass('.photo02', 'bg3'));
+document.addEventListener('DOMContentLoaded', toggleBgClass('.photo03', 'bg4'));
+
+document.querySelector('.link0').addEventListener('click', () => {
+  scrollToAboutSection(2000, '.wrapper');
+});
+
+document.querySelector('.link1').addEventListener('click', () => {
+  scrollToAboutSection(2000, '.about');
+});
+
+document.querySelector('.link2').addEventListener('click', () => {
+  scrollToAboutSection(2000, '.whatWeDo');
+});
+
+document.querySelector('.link3').addEventListener('click', () => {
+  scrollToAboutSection(2000, '.leaderboard');
+});

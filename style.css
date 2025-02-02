@@ -7,6 +7,7 @@
 html {
   font-size: 16px;
   /* background-color: #000000; */
+  touch-action: manipulation;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 130%;
+
   background-attachment: fixed;
   animation: backgroundScale 60s linear infinite;
   position: relative;
@@ -110,7 +112,7 @@ ul.menu > li:hover {
 header {
   height: 100vh;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
@@ -296,7 +298,7 @@ span.white {
   margin-top: 12px;
   height: 100%;
   aspect-ratio: 1/1;
-  background-image: url('img/leader1.jpg');
+  /* background-image: url('img/leader1.jpg'); */
   background-size: 150%;
   background-repeat: no-repeat;
   background-position: center;
@@ -319,6 +321,38 @@ span.white {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.ezekiellVesperra {
+  background-image: url('img/avatars/ezekiellVesperra.jpeg');
+}
+
+.jacobStevens {
+  background-image: url('img/avatars/jacobStevens.jpeg');
+}
+
+.matthewQuinn {
+  background-image: url('img/avatars/matthewQuinn.jpeg');
+}
+
+.franzGross {
+  background-image: url('img/avatars/franzGross.jpeg');
+}
+
+.jacobSalvatore {
+  background-image: url('img/avatars/jacobSalvatore.jpeg');
+}
+
+.jackHoward {
+  background-image: url('img/avatars/jackHoward.jpeg');
+}
+
+.loganTee {
+  background-image: url('img/avatars/loganTee.jpeg');
+}
+
+.michaelPoletko {
+  background-image: url('img/avatars/michaelPoletko.jpeg');
 }
 
 .generalArmy {
@@ -556,14 +590,34 @@ p.history {
   height: 90%;
 }
 
-.patrol1 {
-  background-image: url('img/patrol1.jpg');
+.patrol {
+  /* background-image: url('img/patrol1.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #ffffff;
   border-radius: 20px;
   animation: backgroundScale 60s linear infinite;
+}
+
+.patrol1 {
+  background-image: url('img/patrol1.jpg');
+}
+
+.reaction {
+  background-image: url('img/reaction.jpg');
+}
+
+.defence {
+  background-image: url('img/photos/hangar.jpeg');
+}
+
+.coaching {
+  background-image: url('img/photos/coaching.jpeg');
+}
+
+.insurgent {
+  background-image: url('img/photos/insurgent.jpeg');
 }
 
 .videoPlayer {

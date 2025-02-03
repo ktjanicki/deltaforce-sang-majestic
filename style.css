@@ -10,13 +10,22 @@ html {
 }
 
 body {
+  background-color: #000000;
+}
+
+div.backgroundPhoto {
+  display: flex;
   height: 100vh;
+  width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 130%;
-  background-attachment: fixed;
+  background-size: cover;
   animation: backgroundScale 60s linear infinite;
-  position: relative;
+  -webkit-box-shadow: inset 0px 1px 28px 10px rgb(0, 0, 0);
+  -moz-box-shadow: inset 0px 1px 28px 10px rgba(66, 68, 90, 1);
+  box-shadow: inset 0px 1px 28px 10px rgb(0, 0, 0);
+  position: fixed;
+  z-index: 0;
 }
 
 nav {
@@ -95,7 +104,7 @@ header {
   height: 100vh;
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
+  z-index: 1;
 }
 
 section {
@@ -213,6 +222,9 @@ footer {
   font-weight: 400;
   background: #ada996;
   background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  -webkit-box-shadow: inset 0px 1px 15px -6px rgba(66, 68, 90, 1);
+  -moz-box-shadow: inset 0px 1px 15px -6px rgba(66, 68, 90, 1);
+  box-shadow: inset 0px 1px 15px -6px rgba(66, 68, 90, 1);
 }
 
 .leaderboard {
@@ -458,19 +470,19 @@ div.backgroundPhotoSeparator {
 
 /* Background Photos */
 
-body.bg1 {
+.bg1 {
   background-image: url('img/bg1.jpg');
 }
 
-body.bg2 {
+.bg2 {
   background-image: url('img/photo02.jpeg');
 }
 
-body.bg3 {
+.bg3 {
   background-image: url('img/photo01.jpeg');
 }
 
-body.bg4 {
+.bg4 {
   background-image: url('img/photo03.jpeg');
 }
 
@@ -560,6 +572,7 @@ p.history {
   top: 50%;
   transform: translate(-50%, -50%);
   animation: logoAnimation 1.5s;
+  z-index: 2;
 }
 
 .whatWeDoPhoto {
@@ -619,6 +632,7 @@ p.history {
   transform: translate(-50%, -50%);
   cursor: pointer;
   animation: arrowShow 1s;
+  z-index: 2;
 }
 
 .arrow span {
@@ -646,7 +660,7 @@ p.history {
   }
 
   50% {
-    background-size: auto 160%;
+    background-size: auto 170%;
   }
 
   100% {

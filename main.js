@@ -13,7 +13,7 @@ function updateFavicons() {
         import.meta.url
       ).toString(),
       dark: new URL(
-        '/img/favicon_white/apple-touch-icon.png',
+        '/img/favicon_black/apple-touch-icon.png',
         import.meta.url
       ).toString()
     },
@@ -129,7 +129,7 @@ window.addEventListener('scroll', function () {
 
 function toggleBgClass(classPhoto, bgClass) {
   const targetElement = document.querySelector(classPhoto);
-  const bodyElement = document.body;
+  const bodyElement = document.querySelector('.backgroundPhoto');
   const logo = document.querySelector('.logo');
 
   const observer = new IntersectionObserver((entries) => {

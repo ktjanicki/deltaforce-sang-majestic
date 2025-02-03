@@ -874,6 +874,10 @@ p.history {
 }
 
 @media (max-width: 1150px) and (orientation: landscape) {
+  .sectionTextContent {
+    font-size: 0.8rem;
+  }
+
   .navLogo {
     height: 40vh;
     top: 0px;
@@ -905,7 +909,7 @@ p.history {
   cursor: pointer;
   display: flex;
   padding: 0;
-  margin: 10px;
+  margin: 20px 20px;
   position: fixed;
   z-index: 10;
   border: 1px solid #ffffff;

@@ -1,5 +1,6 @@
 const hamburgerIcon = document.querySelector('.hamburgerIcon');
-const mediaQuery = window.matchMedia('(min-width: 1150px)');
+const desktopWindowSize = window.matchMedia('(min-width: 1150px)');
+const navBar = document.querySelector('nav');
 
 function updateFavicons() {
   const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -69,22 +70,20 @@ function updateFavicons() {
   });
 }
 
-updateFavicons();
-window
-  .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', updateFavicons);
+// scrool
 
-function scrollToAboutSection(duration = 2000, section) {
-  const aboutSection = document.querySelector(section);
+function scrollToSection(section) {
+  const duration = 2000;
+  const targetSection = document.querySelector(section);
 
-  if (!aboutSection) {
-    console.error('Sekcja nie została znaleziona.');
+  if (!targetSection) {
+    console.error(`Sekcja ${section} nie została znaleziona.`);
     return;
   }
 
-  const startPosition = window.pageYOffset;
+  const startPosition = window.scrollY;
   const targetPosition =
-    aboutSection.getBoundingClientRect().top + window.pageYOffset;
+    targetSection.getBoundingClientRect().top + window.scrollY;
   const distance = targetPosition - startPosition;
   let startTime = null;
 
@@ -106,24 +105,55 @@ function scrollToAboutSection(duration = 2000, section) {
   }
 
   requestAnimationFrame(animation);
-  toggleMenu();
+  toggleMobileMenu();
 }
 
-let lastScrollTop = 0;
-const nav = document.querySelector('nav');
+//toggle navbar
 
-window.addEventListener('scroll', function () {
-  const currentScroll =
-    window.pageYOffset || document.documentElement.scrollTop;
+function navBarControl(navSelector, hamburgerSelector, mediaQuery) {
+  let lastScrollTop = 0;
+  const nav = navSelector;
+  const hamburgerIcon = hamburgerSelector;
+  const isDesktop = () => mediaQuery.matches;
 
-  if (currentScroll > lastScrollTop) {
-    if (mediaQuery.matches) nav.classList.add('off');
-  } else {
-    if (mediaQuery.matches) nav.classList.remove('off');
+  if (!nav || !hamburgerIcon) return;
+
+  const handleScroll = () => {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+    if (!isDesktop()) return;
+
+    nav.classList.toggle('off', currentScroll > lastScrollTop);
+    lastScrollTop = Math.max(0, currentScroll);
+  };
+
+  const handleResize = (e) => {
+    if (e.matches) {
+      nav.classList.remove('off');
+      hamburgerIcon.classList.add('hide');
+    } else {
+      nav.classList.add('off');
+      hamburgerIcon.classList.remove('hide');
+    }
+  };
+
+  window.toggleMobileMenu = () => {
+    nav.classList.toggle('off');
+    hamburgerIcon.classList.toggle('opened');
+    hamburgerIcon.setAttribute(
+      'aria-expanded',
+      hamburgerIcon.classList.contains('opened')
+    );
+  };
+
+  if (isDesktop()) {
+    nav.classList.remove('off');
+    hamburgerIcon.classList.add('hide');
   }
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+  window.addEventListener('scroll', () => requestAnimationFrame(handleScroll));
+  mediaQuery.addEventListener('change', handleResize);
+  hamburgerIcon.addEventListener('click', window.toggleMobileMenu);
+}
 
 // background image change
 
@@ -149,48 +179,32 @@ function toggleBgClass(classPhoto, bgClass) {
   }
 }
 
-if (mediaQuery.matches) {
-  nav.classList.remove('off');
-  hamburgerIcon.classList.add('hide');
-}
+window
+  .matchMedia('(prefers-color-scheme: dark)')
+  .addEventListener('change', updateFavicons);
 
-mediaQuery.addEventListener('change', (e) => {
-  if (e.matches) {
-    nav.classList.remove('off');
-    hamburgerIcon.classList.add('hide');
-  } else {
-    nav.classList.add('off');
-    hamburgerIcon.classList.remove('hide');
-  }
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const tasks = [
+    { func: toggleBgClass, args: ['.photo00', 'bg1'] },
+    { func: toggleBgClass, args: ['.photo01', 'bg2'] },
+    { func: toggleBgClass, args: ['.photo02', 'bg3'] },
+    { func: toggleBgClass, args: ['.photo03', 'bg4'] },
+    { func: navBarControl, args: [navBar, hamburgerIcon, desktopWindowSize] },
+    { func: updateFavicons, args: [] }
+  ];
 
-function toggleMenu() {
-  nav.classList.toggle('off');
-  hamburgerIcon.classList.toggle('opened');
-  hamburgerIcon.setAttribute(
-    'aria-expanded',
-    hamburgerIcon.classList.contains('opened')
-  );
-}
+  tasks.forEach(({ func, args }) => func(...args));
 
-hamburgerIcon.addEventListener('click', toggleMenu);
-document.addEventListener('DOMContentLoaded', toggleBgClass('.photo00', 'bg1'));
-document.addEventListener('DOMContentLoaded', toggleBgClass('.photo01', 'bg2'));
-document.addEventListener('DOMContentLoaded', toggleBgClass('.photo02', 'bg3'));
-document.addEventListener('DOMContentLoaded', toggleBgClass('.photo03', 'bg4'));
+  const links = {
+    link0: '.wrapper',
+    link1: '.about',
+    link2: '.whatWeDo',
+    link3: '.leaderboard'
+  };
 
-document.querySelector('.link0').addEventListener('click', () => {
-  scrollToAboutSection(2000, '.wrapper');
-});
-
-document.querySelector('.link1').addEventListener('click', () => {
-  scrollToAboutSection(2000, '.about');
-});
-
-document.querySelector('.link2').addEventListener('click', () => {
-  scrollToAboutSection(2000, '.whatWeDo');
-});
-
-document.querySelector('.link3').addEventListener('click', () => {
-  scrollToAboutSection(2000, '.leaderboard');
+  Object.entries(links).forEach(([linkClass, targetSection]) => {
+    document.querySelector(`.${linkClass}`)?.addEventListener('click', () => {
+      scrollToSection(targetSection);
+    });
+  });
 });

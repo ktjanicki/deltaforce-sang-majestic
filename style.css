@@ -103,7 +103,7 @@ ul.menu > li:hover {
 header {
   height: 100vh;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -627,8 +627,9 @@ p.history {
 
 .arrow {
   position: fixed;
-  bottom: 10%;
   right: 50%;
+  bottom: 10%;
+
   transform: translate(-50%, -50%);
   cursor: pointer;
   animation: arrowShow 1s;
@@ -880,6 +881,20 @@ p.history {
 
   ul.menu {
     margin-top: 40%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .arrow span {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .arrow span {
+    width: 3.5vw;
+    height: 3.5vw;
   }
 }
 

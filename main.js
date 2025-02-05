@@ -179,6 +179,68 @@ function toggleBgClass(classPhoto, bgClass) {
   }
 }
 
+const apiURL =
+  'https://script.google.com/macros/s/AKfycbxteJKT22XX29Fp01i0qYOWePtImA4K4WLEUozfDGWqNlyrOPXBJBukhIexnkxhRp1ITg/exec';
+const form = document.forms['contact-form'];
+const submitBtn = document.querySelector('.submitButton');
+const robotCheck = document.getElementById('robotCheck');
+const messageField = document.getElementById('message');
+
+function validateForm() {
+  const allFieldsValid = [
+    ...document.querySelectorAll('input, select, textarea')
+  ].every((field) => field.checkValidity());
+  const isHuman = robotCheck.value === 'human';
+
+  messageField.disabled = !allFieldsValid || !isHuman;
+  submitBtn.disabled = !allFieldsValid || !isHuman;
+}
+
+form.addEventListener('input', (event) => {
+  const field = event.target;
+  const container = field.parentElement;
+  const icon = container.querySelector('.icon');
+  const errorMessage = container.nextElementSibling;
+
+  if (field.checkValidity()) {
+    container.classList.add('valid');
+    container.classList.remove('invalid');
+    errorMessage.textContent = '';
+  } else {
+    container.classList.add('invalid');
+    container.classList.remove('valid');
+    errorMessage.textContent = field.title;
+  }
+
+  icon.style.display = 'inline';
+  validateForm();
+});
+
+robotCheck.addEventListener('change', validateForm);
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  if (!form.checkValidity() || robotCheck.value !== 'human') {
+    alert('Proszę poprawnie wypełnić formularz.');
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Wysyłanie...';
+
+  try {
+    await fetch(apiURL, { method: 'POST', body: new FormData(form) });
+    alert('Twoje podanie zostało wysłane!');
+    form.reset();
+  } catch (error) {
+    console.error('Błąd!', error.message);
+  } finally {
+    validateForm();
+    submitBtn.textContent = 'Wyślij';
+  }
+});
+
 window
   .matchMedia('(prefers-color-scheme: dark)')
   .addEventListener('change', updateFavicons);
@@ -189,6 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { func: toggleBgClass, args: ['.photo01', 'bg2'] },
     { func: toggleBgClass, args: ['.photo02', 'bg3'] },
     { func: toggleBgClass, args: ['.photo03', 'bg4'] },
+    { func: toggleBgClass, args: ['.photo04', 'bg5'] },
     { func: navBarControl, args: [navBar, hamburgerIcon, desktopWindowSize] },
     { func: updateFavicons, args: [] }
   ];
@@ -196,10 +259,10 @@ document.addEventListener('DOMContentLoaded', () => {
   tasks.forEach(({ func, args }) => func(...args));
 
   const links = {
-    link0: '.wrapper',
     link1: '.about',
     link2: '.whatWeDo',
-    link3: '.leaderboard'
+    link3: '.leaderboard',
+    link4: '.recruitment'
   };
 
   Object.entries(links).forEach(([linkClass, targetSection]) => {

@@ -8,10 +8,7 @@
       name="description"
       content="Oficjalna strona jednostki Delta Force w stanie Los Santos na wyspie Majestic RP."
     />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0 viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,6 +41,7 @@
     <link rel="preload" href="img/photo01.jpeg" as="image" />
     <link rel="preload" href="img/photo02.jpeg" as="image" />
     <link rel="preload" href="img/photo03.jpeg" as="image" />
+    <link rel="preload" href="img/photo04.jpeg" as="image" />
     <meta name="robots" content="follow" />
     <script
       async
@@ -96,13 +94,15 @@
             /></a>
           </div>
           <ul class="menu">
-            <li class="link0">Start</li>
-            <div class="verticalSeparatorBlack"></div>
+            <!-- <li class="link0">Start</li>
+            <div class="verticalSeparatorBlack"></div> -->
             <li class="link1">Czym jest Delta</li>
             <div class="verticalSeparatorBlack"></div>
             <li class="link2">Jak działamy</li>
             <div class="verticalSeparatorBlack"></div>
             <li class="link3">Zarząd</li>
+            <div class="verticalSeparatorBlack"></div>
+            <li class="link4">Dołacz do nas</li>
           </ul>
         </div>
       </nav>
@@ -494,6 +494,187 @@
         </div>
       </section>
       <div class="backgroundPhotoSeparator photo03"></div>
+      <section class="recruitment">
+        <div class="flexRowWrapper">
+          <div class="flexColumnWrapper">
+            <p class="sectionTextHeaderSmall">Jak dołaczyć do Delta Force?</p>
+            <hr class="separatorBlack" />
+            <p class="sectionTextContent">
+              Delta Force to elitarna jednostka specjalna, do której trafiają
+              tylko najlepsi. Jeśli masz odwagę, dyscyplinę i determinację, by
+              stanąć w szeregach najbardziej wyszkolonych operatorów w stanie
+              San Andreas, to jest to miejsce dla Ciebie.
+            </p>
+            <p class="sectionTextContent">
+              Force wymaga spełnienia określonych kryteriów. Kandydat musi
+              posiadać co najmniej stopień Private Second Class, a także
+              ukończone szkolenia Basic+, Med oraz Trap. Oczekujemy od naszych
+              rekrutów nie tylko umiejętności bojowych, ale także zdolności do
+              działania pod presją, współpracy zespołowej i gotowości do
+              podejmowania najtrudniejszych wyzwań.
+            </p>
+            <p class="sectionTextContent">
+              Jeśli czujesz, że masz to, czego potrzeba – dołącz do nas i stań
+              się częścią jednostki, która stoi na pierwszej linii obrony. W
+              Delta Force liczy się precyzja, profesjonalizm i niezłomność.
+              Sprawdź się i pokaż, że jesteś gotów na więcej!
+            </p>
+          </div>
+          <div class="imageWrapper">
+            <div
+              class="sectionImage patrol hrPhoto whatWeDoPhoto boxShadow"
+            ></div>
+          </div>
+        </div>
+        <div class="flexColumnWrapper">
+          <p class="sectionTextHeaderSmall">Wyślij podanie</p>
+          <hr class="separatorBlack" />
+          <form name="contact-form">
+            <div class="flexColumnWrapper">
+              <div class="recruitmentRowWrapper">
+                <div class="inputsWrapper">
+                  <div class="input-container">
+                    <input
+                      type="text"
+                      name="Imię"
+                      required
+                      pattern="^[A-Za-z]{2,15}$"
+                      title="Imię musi zawierać od 2 do 15 liter, bez cyfr i spacji"
+                      autocomplete="off"
+                      placeholder="Imię"
+                    /><span class="icon"></span>
+                  </div>
+                  <small class="error-message"></small>
+                  <div class="input-container">
+                    <input
+                      type="text"
+                      name="Nazwisko"
+                      required
+                      pattern="^[A-Za-z]{2,15}$"
+                      title="Nazwisko musi zawierać od 2 do 15 liter, bez cyfr i spacji"
+                      autocomplete="off"
+                      placeholder="Nazwisko"
+                    /><span class="icon"></span>
+                  </div>
+                  <small class="error-message"></small>
+                  <div class="input-container">
+                    <input
+                      type="text"
+                      name="UID"
+                      required
+                      pattern="^[0-9]{3,6}$"
+                      title="UID musi zawierać od 3 do 6 cyfr"
+                      autocomplete="off"
+                      placeholder="UID"
+                    /><span class="icon"></span>
+                  </div>
+                  <small class="error-message"></small>
+                  <div class="input-container">
+                    <input
+                      type="text"
+                      name="Szkolenia"
+                      required
+                      pattern="^[A-Za-z ]+$"
+                      minlength="3"
+                      title="Wpisz nazwę przynajmniej jednego szkolenia"
+                      autocomplete="off"
+                      placeholder="Jakie posiadasz szkolenia"
+                    /><span class="icon"></span>
+                  </div>
+                  <small class="error-message"></small>
+                  <div class="input-container">
+                    <select id="rank" name="Stopień" required>
+                      <option value="" disabled selected hidden>
+                        Stopień SANG
+                      </option>
+                      <option value="21 - General of the Army">
+                        21 - General of the Army
+                      </option>
+                      <option value="20 - Lieutenant General">
+                        20 - Lieutenant General
+                      </option>
+                      <option value="19 - Major General">
+                        19 - Major General
+                      </option>
+                      <option value="18 - Colonel">18 - Colonel</option>
+                      <option value="17 - Lieutenant Colonel">
+                        17 - Lieutenant Colonel
+                      </option>
+                      <option value="16 - Major">16 - Major</option>
+                      <option value="15 - Captain">15 - Captain</option>
+                      <option value="14 - Lieutenant">14 - Lieutenant</option>
+                      <option value="13 - Chief Warrant Officer">
+                        13 - Chief Warrant Officer
+                      </option>
+                      <option value="12 - Warrant Officer">
+                        12 - Warrant Officer
+                      </option>
+                      <option value="11 - Sergeant Major">
+                        11 - Sergeant Major
+                      </option>
+                      <option value="10 - Master Sergeant">
+                        10 - Master Sergeant
+                      </option>
+                      <option value="9 - Staff Sergeant">
+                        9 - Staff Sergeant
+                      </option>
+                      <option value="8 - Sergeant">8 - Sergeant</option>
+                      <option value="7 - Corporal">7 - Corporal</option>
+                      <option value="6 - Specialist">6 - Specialist</option>
+                      <option value="5 - Private First Class">
+                        5 - Private First Class
+                      </option>
+                      <option value="4 - Private Second Class">
+                        4 - Private Second Class
+                      </option>
+                      <option value="3 - Private">3 - Private</option>
+                      <option value="2 - Reservist">2 - Reservist</option>
+                      <option value="1 - Vacation">1 - Vacation</option>
+                    </select>
+                  </div>
+                  <small class="error-message"></small>
+                  <div class="input-container">
+                    <select id="robotCheck" required>
+                      <option value="" disabled selected hidden>
+                        Czym jesteś?
+                      </option>
+                      <option value="robot">Jestem robotem</option>
+                      <option value="human">Jestem człowiekiem</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="textareaWrapper boxShadow">
+                  <div class="input-container">
+                    <textarea
+                      class=""
+                      id="message"
+                      name="Wiadomość"
+                      required
+                      minlength="70"
+                      title="Wiadomość musi zawierać co najmniej 70 znaków"
+                      autocomplete="off"
+                      placeholder="Napisz coś o sobie oraz dlaczego chcesz dołaczyć do Delta Force"
+                      disabled
+                    ></textarea>
+                  </div>
+                  <small class="error-message"
+                    >Aby cos napisać, wypełnij wszystkie pola</small
+                  >
+                  <button
+                    class="submitButton boxShadow"
+                    type="submit"
+                    id="submitBtn"
+                    disabled
+                  >
+                    Wyślij
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <div class="backgroundPhotoSeparator photo04"></div>
       <footer>
         <div class="flexColumnWrapper">
           <div class="flexRowWrapper">

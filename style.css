@@ -791,6 +791,11 @@ p.history {
   width: 90vw;
 }
 
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
 .logoDelta {
   height: 100vh;
   width: 90vw;
@@ -1029,6 +1034,7 @@ p.history {
   }
 
   div.footerLogos {
+    display: flex;
     justify-content: space-between;
     gap: 80px;
     margin: 0;

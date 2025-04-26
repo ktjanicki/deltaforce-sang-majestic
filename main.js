@@ -180,7 +180,7 @@ function toggleBgClass(classPhoto, bgClass) {
 }
 
 const apiURL =
-  'https://script.google.com/macros/s/AKfycbxteJKT22XX29Fp01i0qYOWePtImA4K4WLEUozfDGWqNlyrOPXBJBukhIexnkxhRp1ITg/exec';
+  'https://script.google.com/macros/s/AKfycbwLWQuNCG-pDztv0PGJCzFRwsGRrZPbES044NFgp9wUXEqj3gTxhC6TAgvmyUfcPKCoaA/exec';
 const form = document.forms['contact-form'];
 const submitBtn = document.querySelector('.submitButton');
 const robotCheck = document.getElementById('robotCheck');

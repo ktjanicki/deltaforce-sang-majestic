@@ -568,6 +568,14 @@ span.white {
   background-image: url('img/avatars/michaelBrabus.jpeg');
 }
 
+.davidCherry {
+  background-image: url('img/avatars/davidCherry.jpeg');
+}
+
+.tomaszGhost {
+  background-image: url('img/avatars/tomaszGhost.jpeg');
+}
+
 .exampleAvatar {
   background-image: url('img/avatars/example.jpeg');
 }

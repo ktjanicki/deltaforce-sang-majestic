@@ -14,7 +14,7 @@ function updateFavicons() {
         import.meta.url
       ).toString(),
       dark: new URL(
-        '/img/favicon_black/apple-touch-icon.png',
+        '/img/favicon_white/apple-touch-icon.png',
         import.meta.url
       ).toString()
     },

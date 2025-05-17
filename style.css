@@ -644,6 +644,10 @@ span.white {
   background-image: url('img/ranks/sergeant.png');
 }
 
+.corporal {
+  background-image: url('img/ranks/corporal.png');
+}
+
 /* Separators */
 
 hr.separatorLight {
